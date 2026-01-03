@@ -1,16 +1,16 @@
-baseurl: https://example.com/
-languageCode: en-us
+baseurl: https://r-y1990.github.io/reyo_memo/
+languageCode: ja
 theme: hugo-theme-stack
 title: Example Site
 copyright: Example Person
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
-DefaultContentLanguage: en
+DefaultContentLanguage: ja
 
 # Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
 # This will make .Summary and .WordCount behave correctly for CJK languages.
-hasCJKLanguage: false
+hasCJKLanguage: true
 
 languages:
     en:
@@ -20,22 +20,6 @@ languages:
         params:
             sidebar:
                 subtitle: Example description
-    zh-cn:
-        languageName: 简体中文
-        title: 演示站点
-        weight: 2
-        params:
-            sidebar:
-                subtitle: 演示说明
-
-    zh-tw:
-        languageName: 正體中文
-        title: 演示站點
-        weight: 2
-        params:
-            sidebar:
-                subtitle: 演示說明
-
     ja:
         languageName: 日本語
         title: サンプルサイト
@@ -43,25 +27,9 @@ languages:
         params:
             sidebar:
                 subtitle: サンプル説明
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            sidebar:
-                subtitle: وصف تجريبي
-
-services:
-    # Change it to your Disqus shortname before using
-    disqus:
-        shortname: "hugo-theme-stack"
-    # GA Tracking ID
-    googleAnalytics:
-        id:
 
 pagination:
-    pagerSize: 3
+    pagerSize: 10
 
 permalinks:
     post: /p/:slug/
@@ -73,10 +41,6 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
-
-    footer:
-        since: 2020
-        customText:
 
     dateFormat:
         published: Jan 02, 2006
@@ -99,89 +63,9 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
+        enabled: false
         provider: disqus
 
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
-
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
-
-        beaudar:
-            repo:
-            issueTerm: pathname
-            label:
-            theme:
-
-        remark42:
-            host:
-            site:
-            locale:
-
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
-
-        # Waline client configuration see: https://waline.js.org/en/reference/component.html
-        waline:
-            serverURL:
-            lang:
-            pageview:
-            emoji:
-                - https://unpkg.com/@waline/emojis@1.0.1/weibo
-            requiredMeta:
-                - name
-                - email
-                - url
-            locale:
-                admin: Admin
-                placeholder:
-
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
-
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-            proxy:
-
-        cusdis:
-            host:
-            id:
     widgets:
         homepage:
             - type: search
@@ -200,16 +84,10 @@ params:
     opengraph:
         twitter:
             # Your Twitter username
-            site:
+            site: "@reyo_rta"
 
             # Available values: summary, summary_large_image
             card: summary_large_image
-
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
 
     colorScheme:
         # Display toggle
@@ -256,18 +134,6 @@ related:
 
 markup:
     goldmark:
-        extensions:
-            passthrough:
-                enable: true
-                delimiters:
-                    block:
-                        - - \[
-                          - \]
-                        - - $$
-                          - $$
-                    inline:
-                        - - \(
-                          - \)
         renderer:
             ## Set to true if you have HTML content inside Markdown
             unsafe: true
