@@ -1,8 +1,8 @@
 baseurl: https://r-y1990.github.io/reyo_memo/
 languageCode: ja
 theme: hugo-theme-stack
-title: Example Site
-copyright: Example Person
+title: Reyo's Site
+# copyright: Example Person
 
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
@@ -13,20 +13,20 @@ DefaultContentLanguage: ja
 hasCJKLanguage: true
 
 languages:
-    en:
-        languageName: English
-        title: Example Site
+    ja:
+        languageName: 日本語
+        title: れよの雑多メモ
         weight: 1
         params:
             sidebar:
-                subtitle: Example description
-    ja:
-        languageName: 日本語
-        title: サンプルサイト
+                subtitle: れよが雑多にいろいろまとめるためのサイト
+    en:
+        languageName: English
+        title: Reyo's Memo
         weight: 2
         params:
             sidebar:
-                subtitle: サンプル説明
+                subtitle: Example description
 
 pagination:
     pagerSize: 10
@@ -47,8 +47,8 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        # emoji: 🍥
+        subtitle: subtitle
         avatar:
             enabled: true
             local: true
@@ -114,12 +114,17 @@ menu:
           url: https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
-
         - identifier: twitter
           name: Twitter
-          url: https://twitter.com
+          url: https://x.com/reyo_rta
           params:
               icon: brand-twitter
+        - identifier: twitch
+          name: Twitch
+          url: https://www.twitch.tv/scarlet1990_r
+          params:
+              icon: twitch
+
 
 related:
     includeNewer: true
@@ -137,6 +142,7 @@ markup:
         renderer:
             ## Set to true if you have HTML content inside Markdown
             unsafe: true
+            hardWraps: true
     tableOfContents:
         endLevel: 4
         ordered: true
