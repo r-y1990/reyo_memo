@@ -29,7 +29,7 @@ languages:
                 subtitle: Example description
 
 pagination:
-    pagerSize: 10
+    pagerSize: 20
 
 permalinks:
     post: /p/:slug/

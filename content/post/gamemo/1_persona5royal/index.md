@@ -1,17 +1,19 @@
 +++
-title = "Persona5"
-date = '2026-01-04T21:40:26+09:00'
-
+title = "ペルソナ５ ザ・ロイヤル"
+date = "2023-10-31"
+description = "hoge"
 categories = [
-"Gamemo"
+    "Gamemo"
 ]
 
 tags = [
 "Gamemo"
 ]
-image = "persona.png"
 draft = false
+image = "persona.png"
 +++
+
+# ペルソナ5 The Royal
 
 クリア時間：約150時間
 
