@@ -1,13 +1,12 @@
 +++
 title = "ペルソナ５ ザ・ロイヤル"
 date = "2023-10-31"
-description = "hoge"
 categories = [
     "Gamemo"
 ]
 
 tags = [
-"Gamemo", "OLD REVIEW"
+"Gamemo", "OLD ver REVIEW"
 ]
 draft = false
 image = "persona.png"
