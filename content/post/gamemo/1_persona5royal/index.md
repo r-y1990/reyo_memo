@@ -7,7 +7,7 @@ categories = [
 ]
 
 tags = [
-"Gamemo"
+"Gamemo", "OLD REVIEW"
 ]
 draft = false
 image = "persona.png"

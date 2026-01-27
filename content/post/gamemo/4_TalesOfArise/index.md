@@ -3,11 +3,11 @@ title = "テイルズオブアライズ"
 date = "2024-02-29"
 
 categories = [
-"Gamemo"
+"Gamemo",
 ]
 
 tags = [
-"Gamemo"
+"Gamemo", "OLD ver REVIEW"
 ]
 draft = false
 +++

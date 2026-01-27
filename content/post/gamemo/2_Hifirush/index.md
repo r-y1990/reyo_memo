@@ -3,7 +3,7 @@ title = "Hi-Fi Rush"
 date = "2023-12-31"
 description = "hoge"
 categories = ["Gamemo"]
-tags = ["Gamemo"]
+tags = ["Gamemo", "OLD ver REVIEW"]
 draft = false
 +++
 

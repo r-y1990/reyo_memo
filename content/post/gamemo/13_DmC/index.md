@@ -7,7 +7,7 @@ categories = [
 ]
 
 tags = [
-"Gamemo"
+"Gamemo", "OLD ver REVIEW"
 ]
 draft = false
 +++
