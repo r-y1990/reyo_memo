@@ -13,145 +13,144 @@ DefaultContentLanguage: ja
 hasCJKLanguage: true
 
 languages:
-    ja:
-        languageName: 日本語
-        title: れよの雑多メモ
-        weight: 1
-        params:
-            sidebar:
-                subtitle: れよが雑多にいろいろまとめるためのサイト
-    en:
-        languageName: English
-        title: Reyo's Memo
-        weight: 2
-        params:
-            sidebar:
-                subtitle: Example description
+  ja:
+    languageName: 日本語
+    title: れよの雑多メモ
+    weight: 1
+    params:
+      sidebar:
+        subtitle: れよが雑多にいろいろまとめるためのサイト
+  en:
+    languageName: English
+    title: Reyo's Memo
+    weight: 2
+    params:
+      sidebar:
+        subtitle: Example description
 
 pagination:
-    pagerSize: 20
+  pagerSize: 20
 
 permalinks:
-    post: /p/:slug/
-    page: /:slug/
+  post: /p/:slug/
+  page: /:slug/
 
 params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
 
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+  dateFormat:
+    published: 2006-01-02 JST
+    lastUpdated: 2006-01-02 JST
 
-    sidebar:
-        # emoji: 🍥
-        subtitle: subtitle
-        avatar:
-            enabled: true
-            local: true
-            src: img/devil.png
+  sidebar:
+    # emoji: 🍥
+    subtitle: subtitle
+    avatar:
+      enabled: true
+      local: true
+      src: img/devil.png
 
-    article:
-        math: false
-        toc: true
-        readingTime: true
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: true
+      default: Licensed under CC BY-NC-SA 4.0
 
-    comments:
-        enabled: false
-        provider: disqus
+  comments:
+    enabled: false
+    provider: disqus
 
-    widgets:
-        homepage:
-            - type: search
-            - type: archives
-              params:
-                  limit: 5
-            - type: categories
-              params:
-                  limit: 10
-            - type: tag-cloud
-              params:
-                  limit: 10
-        page:
-            - type: toc
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
 
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site: "@reyo_rta"
+  opengraph:
+    twitter:
+      # Your Twitter username
+      site: "@reyo_rta"
 
-            # Available values: summary, summary_large_image
-            card: summary_large_image
+      # Available values: summary, summary_large_image
+      card: summary_large_image
 
-    colorScheme:
-        # Display toggle
-        toggle: true
+  colorScheme:
+    # Display toggle
+    toggle: true
 
-        # Available values: auto, light, dark
-        default: auto
+    # Available values: auto, light, dark
+    default: auto
 
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
 
 ### Custom menu
 ### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+  main: []
 
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/CaiJimmy/hugo-theme-stack
-          params:
-              icon: brand-github
-        - identifier: twitter
-          name: Twitter
-          url: https://x.com/reyo_rta
-          params:
-              icon: brand-twitter
-        - identifier: twitch
-          name: Twitch
-          url: https://www.twitch.tv/scarlet1990_r
-          params:
-              icon: twitch
-
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/CaiJimmy/hugo-theme-stack
+      params:
+        icon: brand-github
+    - identifier: twitter
+      name: Twitter
+      url: https://x.com/reyo_rta
+      params:
+        icon: brand-twitter
+    - identifier: twitch
+      name: Twitch
+      url: https://www.twitch.tv/scarlet1990_r
+      params:
+        icon: twitch
 
 related:
-    includeNewer: true
-    threshold: 60
-    toLower: false
-    indices:
-        - name: tags
-          weight: 100
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
 
-        - name: categories
-          weight: 200
+    - name: categories
+      weight: 200
 
 markup:
-    goldmark:
-        renderer:
-            ## Set to true if you have HTML content inside Markdown
-            unsafe: true
-            hardWraps: true
-    tableOfContents:
-        endLevel: 4
-        ordered: true
-        startLevel: 2
-    highlight:
-        noClasses: false
-        codeFences: true
-        guessSyntax: true
-        lineNoStart: 1
-        lineNos: true
-        lineNumbersInTable: true
-        tabWidth: 4
+  goldmark:
+    renderer:
+      ## Set to true if you have HTML content inside Markdown
+      unsafe: true
+      hardWraps: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4

@@ -1,7 +1,7 @@
 +++
 title = "メモ"
 description = "メモするやで"
-date = '2026-01-04T01:19:33+09:00'
+date = '2025-01-04'
 categories = ["diary"]
 tags = ["Memo"]
 
