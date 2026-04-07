@@ -1,1 +1,34 @@
-public
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Hugo cache (extended version)
+/resources/cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Node (テーマやビルドで使う場合)
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+
+# Environment files
+.env
+.env.local
+
+# Mac metadata
+.AppleDouble
+.LSOverride
+
+# Windows
+Desktop.ini
