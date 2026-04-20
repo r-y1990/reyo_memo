@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: false
 
 defaults:
@@ -23,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.128.0"
+      HUGO_VERSION: "0.157.0"
     steps:
       - name: Install Hugo CLI
         run: |
@@ -61,4 +61,3 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-
