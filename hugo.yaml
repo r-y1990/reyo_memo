@@ -49,10 +49,7 @@ params:
   sidebar:
     # emoji: 🍥
     subtitle: subtitle
-    avatar:
-      enabled: true
-      local: true
-      src: img/devil.png
+    avatar: img/devil.png
 
   article:
     math: false
@@ -142,6 +139,14 @@ markup:
       ## Set to true if you have HTML content inside Markdown
       unsafe: true
       hardWraps: true
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      linkifyProtocol: https
+      strikethrough: true
+      table: true
+      taskList: true
   tableOfContents:
     endLevel: 4
     ordered: true
