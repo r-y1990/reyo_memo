@@ -9,5 +9,5 @@ categories = [
 tags = [
 {{ if in .Path "gamemo" }}"Gamemo"{{ end }}
 ]
-draft = false
+draft = true
 +++
