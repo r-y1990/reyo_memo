@@ -6,7 +6,7 @@ categories = ["Gamemo"]
 
 tags = ["Gamemo", "ゲーム感想"]
 image="image.png"
-draft = true
+draft = false
 +++
 
 - プレイ時間
