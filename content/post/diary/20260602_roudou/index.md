@@ -3,7 +3,7 @@ title = "労働は悪である"
 date = "2026-06-01"
 description = "労働は悪であるということを可視化すると悲しくなるね"
 
-categories = ["diary"]
+categories = ["雑記"]
 
 tags = ["diary", "random", "雑記"]
 draft = false

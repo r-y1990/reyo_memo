@@ -3,7 +3,7 @@ title = "【雑記】脱ナイトレインしたい"
 date = "2026-04-20"
 
 categories = [
-"Diary","Random"
+"雑記"
 ]
 
 tags = [

@@ -4,7 +4,7 @@ date = "2026-05-12"
 description = "長期休暇の失敗と成功雑記"
 
 categories = [
-"Diary"
+"雑記"
 ]
 
 tags = [
