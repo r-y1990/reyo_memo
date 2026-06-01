@@ -3,4 +3,4 @@
 echo "タイトルを入力してください"
 read title
 
-hugo new post/diary/${title}/index.md
+hugo new -k diary post/diary/${title}/index.md
