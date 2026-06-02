@@ -1,0 +1,57 @@
+name: New Memo
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Title text for yyyymmdd_{title}"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.157.0"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O "${{ runner.temp }}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
+
+      - name: Create memo
+        id: create
+        run: |
+          output="$(bash ./memo.bash "${{ inputs.title }}")"
+          echo "$output"
+          content_name="$(echo "$output" | sed -n 's/^CONTENT_NAME=//p' | tail -n 1)"
+          if [ -z "$content_name" ]; then
+            echo "Could not determine created content name." >&2
+            exit 1
+          fi
+          echo "content_name=$content_name" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        run: |
+          if [ -z "$(git status --porcelain -- content/post/memo)" ]; then
+            echo "No memo content changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/post/memo
+          git commit -m "Add memo: ${{ steps.create.outputs.content_name }} [skip ci]"
+          git push

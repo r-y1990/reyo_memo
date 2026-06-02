@@ -1,6 +1,16 @@
 #!/bin/bash
 
-echo "タイトルを入力してください"
-read title
+set -euo pipefail
 
-hugo new post/gamemo/${title}/index.md
+if [ $# -gt 0 ]; then
+  title="$1"
+else
+  echo "タイトルを入力してください"
+  read -r title
+fi
+
+date_prefix="$(TZ=Asia/Tokyo date +%Y%m%d)"
+content_name="${date_prefix}_${title}"
+
+echo "CONTENT_NAME=${content_name}"
+hugo new -k gamemo "post/gamemo/${content_name}/index.md"
