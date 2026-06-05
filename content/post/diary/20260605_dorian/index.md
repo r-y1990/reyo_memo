@@ -64,4 +64,4 @@ draft = false
 
 ほな
 
-[^1]: 閲覧注意ですが[この辺](https://ameblo.jp/sekaino-television999/entry-12893444249.html)みるといいです
+[^1]: 直接的な絵はないですが一応閲覧注意です、[この辺](https://ameblo.jp/sekaino-television999/entry-12893444249.html)みるといいです
