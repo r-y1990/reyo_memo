@@ -24,7 +24,7 @@ draft = false
 僕の好きなVTuberのヘアピンまみれさんも食べてるし美味いと言ってる
 (4分くらいのところ（このサイトの機能で時間指定してるけどなんか上手くいかない）)
 
-{{< youtube id=ceiAhBJHhJY start=245 end=260 loading=lazy >}}
+{{< youtube id=ceiAhBJHhJY start=245 loading=lazy mute=true >}}
 
 そんな中、同僚が旅行のお土産に **ドリアン系のお菓子** を持ってきた
 それ系のお菓子はそのものの味を体験するにはかなり良い入口と思う
