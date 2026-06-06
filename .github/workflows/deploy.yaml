@@ -23,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.157.0"
+      HUGO_VERSION: "0.159.1"
     steps:
       - name: Install Hugo CLI
         run: |
@@ -36,8 +36,8 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      # - name: remove unnecessary files
-      #   run: rm -rf ./themes/hugo-theme-stack/layouts/_shortcodes
+      - name: remove unnecessary files
+        run: rm -rf ./themes/hugo-theme-stack/layouts/_shortcodes
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
