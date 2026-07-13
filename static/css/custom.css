@@ -1,13 +1,3 @@
-.spoiler {
-  background: #000;
-  color: #000;
-  cursor: pointer;
-}
-
-.spoiler:hover {
-  color: #fff;
-}
-
 figure.screenshot {
   margin: 2rem auto;
   text-align: center;
@@ -15,7 +5,7 @@ figure.screenshot {
 
 figure.screenshot img {
   display: block;
-  width: clamp(320px, 80vw, 700px);
+  width: clamp(32px, 80vw, 10px);
   height: auto;
   margin-inline: auto;
 }
