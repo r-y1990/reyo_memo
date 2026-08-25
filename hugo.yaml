@@ -120,7 +120,7 @@ menu:
         icon: brand-twitter
     - identifier: twitch
       name: Twitch
-      url: https://www.twitch.tv/scarlet1990_r
+      url: https://www.twitch.tv/reyo046
       params:
         icon: twitch
 
