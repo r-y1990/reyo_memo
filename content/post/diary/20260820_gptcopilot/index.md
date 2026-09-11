@@ -129,6 +129,137 @@ Copilot側の制限にかからなければ。
 
 {{< figure src="riyouryou.png" >}}
 
+## 黒画面の整理
+
+PowerShellの表示もいい加減デフォルトをやめるか～となったのでちょっと修正
+会社ではWarpというターミナルを使っていたが、Windows版が日本語対応さすがにひどかったのでやめ。
+
+- 入力補助というか履歴からコマンドやるやつ換系（設定）
+- NerdFont
+- Oh My Posh
+
+この三つを入れた。（最後のは設定だけど）
+
+前提
+
+- PowerShell7を入れる
+- Wingetをつかう
+
+> 入力の履歴
+
+```powershell
+Install-Module PSReadLine -Scope CurrentUser -Force
+Import-Module PSReadLine
+
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView
+```
+
+入力の履歴がでる
+
+{{< figure src="yosoku.png" >}}
+
+> Oh My Posh
+
+変な名前だが結構優秀
+
+```
+winget install JanDeDobbeleer.OhMyPosh
+```
+
+アイコンを使うので、デフォルトだと表示しきれないらしくNerd Fontってやつを入れた方がいいらしい。
+
+```
+oh-my-posh font install meslo
+```
+
+あとはWindowsTerminalの設定からフォントをMesloLGM NerdFontに変更する。
+
+この辺躓いたので適宜Jsonのほうで設定(左下の奴)を修正したりしたきがする
+
+{{< figure src="pssettei.png" >}}
+
+> 起動時の設定
+
+`$PROFILE` に以下を追記。
+
+```
+# PSReadLine
+import-Module PSReadLine
+
+Set-PSReadLineOption -PredictionSource HistoryAndPlugin
+Set-PSReadLineOption -PredictionViewStyle ListView
+
+# Terminal Icons
+Import-Module Terminal-Icons
+
+# oh my posh setting
+# ここはちゃんと設定ファイル作らないといけなかった気がする
+oh-my-posh init pwsh --config "$HOME\.config\prompt.omp.json" | Invoke-Expression
+```
+
+<details><summary>Poshの設定例</summary>
+
+設定には `$HOME\.config\prompt.omp.json` を指定したがデフォルトは違いそう。
+まぁ管理するためにここに修正した。
+
+好みでデフォルトだとパス表示が相対だったので絶対パスに修正
+segments -> properties -> style
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
+
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": false,
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "template": "📁 {{ .Path }} ",
+          "properties": {
+            "style": "full"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": " {{ .HEAD }} {{ if .Working.Changed }}✗{{ end }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "❯ "
+        }
+      ]
+    }
+  ],
+
+  "final_space": true
+}
+```
+
+</details>
+
+見た目はこんな感じに、もうちょいカラフルでもいいかも。
+あとPowershellはlsが使えるがデフォがこれ、ls -l相当なのでLinuxに寄せたいしそういうのもあるみたい。
+気が向いたら入れてみたいところ。
+
+{{< figure src="terminal.png" >}}
+
+## 最後に
+
 と言ったとこで自由研究という名目で結構頑張りました。
 コードの修正も楽になるね。Botの機能拡充ももう少しやりたいところ。
 
