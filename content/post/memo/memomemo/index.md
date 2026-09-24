@@ -5,7 +5,7 @@ date = '2025-01-04'
 categories = ["diary"]
 tags = ["Memo"]
 
-draft = false
+draft = true
 +++
 
 # 初投稿ドモ
