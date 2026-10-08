@@ -4,6 +4,7 @@ date = "2026-10-07"
 description = "何においても名作と呼ばれるものは名作たるゆえんがあるよねっていう話"
 
 categories = ["雑記"]
+slug = "meisakueiga_mitai"
 
 tags = ["diary", "random", "雑記"]
 draft = false
