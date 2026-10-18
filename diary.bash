@@ -10,7 +10,7 @@ else
 fi
 
 date_prefix="$(TZ=Asia/Tokyo date +%Y%m%d)"
-content_name="${date_prefix}_${title}"
+content_name="_${title}"
 
 echo "CONTENT_NAME=${content_name}"
 hugo new -k diary "post/diary/${content_name}/index.md"
